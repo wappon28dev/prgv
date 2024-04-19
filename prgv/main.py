@@ -30,7 +30,7 @@ def parse_args() -> None:
     )
     parser_validate.set_defaults(
         handler=lambda args: validate(
-            ArgsValidate(**vars(args)),
+            ArgsValidate(file=args.file, schema=args.schema),
         ),
     )
 
@@ -45,11 +45,12 @@ def parse_args() -> None:
     )
     parser_register.set_defaults(
         handler=lambda args: register(
-            ArgsRegister(**vars(args)),
+            ArgsRegister(url=args.url),
         )
     )
 
     args = parser.parse_args()
+    print(args)
     if hasattr(args, "handler"):
         args.handler(args)
     else:
