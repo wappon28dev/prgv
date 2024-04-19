@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "prgv"
+version = "0.1.0"
+description = ""
+authors = ["wappon28dev <wappon_28_dev@ruru.be>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+questionary = "^2.0.1"
+ruff = "^0.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = ["ALL"]
+ignore = [
+  "G004",
+  "PD901",
+  "PD002",
+  "RUF001",
+  "RUF002",
+  "RUF003",
+  "ANN101",
+  "ANN102",
+  "ANN002",
+  "ANN003",
+  "ERA",
+  "RSE",
+  "D",
+  "C90",
+  "T20",
+  "SLF",
+  "BLE",
+  "FBT",
+  "TRY",
+  "COM",
+  "S",
+  "EM",
+  "EXE",
+  "ICN",
+  "RET",
+  "SIM",
+  "TCH",
+  "PTH",
+  "ISC",
+  "N",
+  "PT",
+  "INP001",
+  "TD002",
+  "TD003",
+  "FA102",
+]
+
+[tool.poetry.scripts]
+prgv = "prgv.main:main"
