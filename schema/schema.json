@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "namespace": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "validators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "command": {
+                  "type": "string"
+                },
+                "stdin": {
+                  "type": "string"
+                },
+                "except_returncode": {
+                  "type": "number"
+                },
+                "expect_stdout": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "command",
+                "stdin",
+                "except_returncode",
+                "expect_stdout"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "tasks"
+        ]
+      }
+    }
+  },
+  "required": [
+    "namespace",
+    "name",
+    "description",
+    "validators"
+  ]
+}

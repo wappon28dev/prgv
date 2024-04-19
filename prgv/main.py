@@ -50,7 +50,6 @@ def parse_args() -> None:
     )
 
     args = parser.parse_args()
-    print(args)
     if hasattr(args, "handler"):
         args.handler(args)
     else:
